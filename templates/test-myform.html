@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script type='text/javascript'>
+        function addFields(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+                // Append a node with a random text
+                container.appendChild(document.createTextNode("Author " + (i+1)));
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.name = "author" + i;
+                container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+            }
+        }
+    </script>
+
+    <h1>placeholder</h1>
+    <h2>:)</h2>
+    <p>
+    add title to your project
+    </p>
+    
+    <form action="." method="POST">
+    <input type="text" name="title">
+
+    <br>
+    <p>
+    Add Number of Authors
+    </p>
+    <input type="number" id="member" name="member" value=""<br />
+    <a href="#" id="filldetails" onclick="addFields()">Add Author Names</a>
+    <input type="submit" name="myform" value="Send">
+
+    <div id="container"/>
+
+    </form>
+
+</body>
+</html>
+

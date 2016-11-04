@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- don't mess with this -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHANGE THE TITLE FROM "FEATURE" TO YOUR TITLE-->
+		<title>Feature | The Daily Texan</title> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i|Roboto:400,400i,500,500i" rel="stylesheet">
+		<link rel="shortcut icon" href="https://www.google.com/s2/favicons?domain=www.dailytexanonline.com">
+    <!-- inlined stylesheet -->
+    <style>
+    /* globals */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: Merriweather, Georgia, serif;
+      }
+      p, a, li, ul, span {
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      /* navigation */
+      .navbar {
+        background: #cc5527;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.025), 0 1px 2px rgba(0,0,0,0.07);
+        display: flex;
+        align-content: center;
+        margin-bottom: 0 !important;
+      }
+      .navbar-brand {
+        color: #fff !important;
+        font-family: Merriweather, Georgia, serif;
+        margin-left: 0 !important;
+        text-align: center;
+        width: 100%;
+      }
+      .navbar-brand:hover {
+        text-decoration: underline;
+      }
+      /* main page content */
+      div.row.header {
+        margin-top: 1em;
+      }
+      div.header > div.col-md-8, .credits > div.col-md-8 {
+        padding: 0;
+        padding-bottom: 1em;
+      }
+      h1#headline {
+        font-size: 3em;
+      }
+      p.byline {
+        font-size: 1em;
+        font-style: italic;
+      }
+      .sharer {
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        -o-flex-direction: row;
+        flex-direction: row;
+      }
+      .sharer > a {
+        text-decoration: none !important;
+      }
+      #fb-share, #twitter-share {
+        margin: 0 .5em 0 .5em;
+      }
+      #fb-share {
+        background:#3b5998;
+        border-radius: 3px;
+        color: #fff;
+        margin-left: 0;
+        padding: .1em .6em .1em .6em;
+      }
+      #fb-share:hover {
+        background: #6d84b4;
+      }
+      #twitter-share {
+        background:#00aced;
+        border-radius: 3px;
+        color: #fff;
+        margin-left: 0;
+        padding: .1em .6em .1em .6em;
+      }
+      #twitter-share:hover {
+        background: #07bbff;
+      }
+      #fb-share > span, #twitter-share > span {
+        font-size: 1.25rem;
+        margin-left: .25em;
+      }
+      .main-content-container {
+        margin-bottom: 2em;
+      }
+      #main {
+        border-top: 1px solid lightgray;
+        padding: 1em 0;
+      }
+      /* credits */
+      .credits {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      /* footer */
+      footer {
+        padding-top: 1em;
+        padding-bottom: 1em;
+      }
+      .footer-txt {
+        font-size: 1em;
+        text-align: center;
+      }
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 768px) {
+        div.row.header {
+          margin-top: 0;
+        }
+        div.row {
+          padding: 0 2em;
+        }
+      }
+    </style>
+	</head>
+	<body>
+    <!-- navigation bar -->
+		<nav class="navbar navbar-default topnav" id="navi" style="z-index: 5000;">
+			<div class="container-fluid">
+					<a class="navbar-brand" href="http://www.dailytexanonline.com">The Daily Texan</a>
+			</div>
+		</nav>
+    <!-- main content -->
+    <div class="container-fluid">
+      <div class="row header">
+        <div class="col-md-2" aria-label="padding"></div>
+        <div class="col-md-8">
+          <h1 id="headline">Your headline goes here.</h1>
+          <p class="byline">By <a href="https://www.dailytexanonline.com/author/John-Doe">John Doe</a>, <a href="https://www.dailytexanonline.com/author/John-Doe">Jane Doe</a>, and <a href="https://www.dailytexanonline.com/author/John-Doe">Janet Doe</a></p> <!-- CHANGE the URLs and names -->
+          <div class="sharer">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.dailytexanonline.com/" target="_blank"> <!-- change the URL to your feature URL -->
+              <div id="fb-share">
+                <i class="fa fa-facebook-square" aria-hidden="false"></i>
+                <span>Facebook</span>
+              </div>
+            </a>
+            <a href="https://twitter.com/home?status=" target="_blank"> <!-- add the tweet you want to write after ?status= -->
+              <div id="twitter-share">
+                <i class="fa fa-twitter-square" aria-hidden="false"></i>
+                <span>Twitter</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2" aria-label="padding"></div>
+      </div>
+      <div class="row main-content-container">
+        <div class="col-md-2" aria-label="padding"></div>
+        <div class="col-md-8 main" id="main">
+          <p class="intro">If you have an introduction paragraph, it goes here.</p>
+          <!-- FILL with your content -->
+        </div>
+        <div class="col-md-2" aria-label="padding"></div>
+      </div>
+      <div class="row credits">
+      <div class="col-md-2" aria-label="padding"></div>
+      <div class="col-md-8">
+        <h3 class="contrib">Contributors</h3>
+        <!-- change contributors as necessary -->
+        <p class="contrib-txt">By <a href="https://www.dailytexanonline.com/author/John-Doe">John Doe</a></p> <!-- CHANGE THE PART AFTER "/author/" and the author name, or add multiple authors in the By x, y, and z format -->           
+      </div>
+      <div class="col-md-2" aria-label="padding"></div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+      <div class="container">
+        <p class="footer-txt">Created by <a href="http://www.dailytexanonline.com">The Daily Texan</a>
+      </div>
+    </div>
+    </footer>
+    </div>
+	</body>
+</html>
