@@ -144,7 +144,8 @@
         <div class="col-md-2" aria-label="padding"></div>
         <div class="col-md-8">
           <h1 id="headline">{{headline}}</h1>
-          <p class="byline">By <a href="https://www.dailytexanonline.com/author/John-Doe">John Doe</a>, <a href="https://www.dailytexanonline.com/author/John-Doe">Jane Doe</a>, and <a href="https://www.dailytexanonline.com/author/John-Doe">Janet Doe</a></p> <!-- CHANGE the URLs and names -->
+          <p class="byline">By {% for author in authors %}
+          <a href="https://www.dailytexanonline.com/author/John-Doe">{{author}}</a>, <a href="https://www.dailytexanonline.com/author/John-Doe">Jane Doe</a>, and <a href="https://www.dailytexanonline.com/author/John-Doe">Janet Doe</a></p> <!-- CHANGE the URLs and names -->
           <div class="sharer">
             <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.dailytexanonline.com/" target="_blank"> <!-- change the URL to your feature URL -->
               <div id="fb-share">
@@ -165,7 +166,7 @@
       <div class="row main-content-container">
         <div class="col-md-2" aria-label="padding"></div>
         <div class="col-md-8 main" id="main">
-          <p class="intro">If you have an introduction paragraph, it goes here.</p>
+          <p class="intro">{{intro_paragraph}}</p>
           {{content}}
         </div>
         <div class="col-md-2" aria-label="padding"></div>

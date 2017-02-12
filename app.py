@@ -5,39 +5,23 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def myform():
-    return render_template("myform.html")
+def input():
+    return render_template("input.html")
 
 @app.route('/', methods=['POST', 'GET'])
-def myform_post():
+def input_post():
     title = request.form['title']
     headline = request.form['headline']
+    authcount = int(request.form['member'])
+    tauthors = []
+    tauthorlinks = []
+    for x in range (1,authcount):
+        authors.append(request.form['author'+i])
+        authorlinks.append("")
+    
     intro_paragraph = request.form['intro_paragraph']
-    return render_template("output.html", title = title, headline=headline, intro_paragraph=intro_paragraph)
-
-# def generate_header(title):
-#     g = open('template.html','r')
-#     count = 0
-#     while (count < 8):
-#         message = g.readline()
-#         f.write(message)
-#         count+=1
-#     f.write("""		<title>"""+title+""" | The Daily Texan</title>"""+"\n")
-#     g.readline()
-#     count+=1
-#     while (count < 145):
-#         message = g.readline()
-#         f.write(message)
-#         count +=1
-#     f.write("""          <h1 id="headline">"""+title+"""</h1>"""+"\n")
-#     g.readline()
-#     count+=1
-#     while (count < 192):
-#         message = g.readline()
-#         f.write(message)
-#         count +=1
-#     f.close()
-
+    content = request.form['content']
+    return render_template("output.html", title = title, headline=headline, intro_paragraph=intro_paragraph, content=content)
 
 if __name__ == '__main__':
     app.run()

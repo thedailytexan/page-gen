@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block head %}
+{{super()}}
+{% endblock %}
 <body>
+{% block content %}
     <script type='text/javascript'>
         function addFields(){
             // Number of inputs to create
@@ -24,28 +27,48 @@
             }
         }
     </script>
-
-    <h1>placeholder</h1>
-    <h2>:)</h2>
+    <form action="." method="POST">
+    
     <p>
-    add title to your project
+    ADD PROJECT TITLE:
     </p>
     
-    <form action="." method="POST">
-    <input type="text" name="title">
+        <input type="text" name="title">
+    
+    <p>
+    ADD PROJECT HEADLINE:
+    </p>
+    
+        <input type="text" name="headline">
+
+    <p>
+    ADD INTRODUCTORY PARAGRAPH:
+    </p>
+    
+        <input type="text" name="intro_paragraph">
+    <br>
 
     <br>
     <p>
-    Add Number of Authors
+    ADD CONTENT:
+    </p>
+        <input type="text" name="content">
+
+    <p>
+    NUMBER OF AUTHORS: 
     </p>
     <input type="number" id="member" name="member" value=""<br />
-    <a href="#" id="filldetails" onclick="addFields()">Add Author Names</a>
-    <input type="submit" name="myform" value="Send">
+    <a href="#" id="filldetails" onclick="addFields()">ADD AUTHORS</a>
+
+    <input type="submit" name="frm" value="Send">
 
     <div id="container"/>
 
     </form>
-
+{% endblock %}
+{% block footer %}
+{{super()}}
+{% endblock %}
 </body>
 </html>
 
